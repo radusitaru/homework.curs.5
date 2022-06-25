@@ -8,12 +8,10 @@ import java.util.List;
 @RequestMapping("Countries")
 public class CountryController {
 
-    private final CountryReader countryReader;
     private final CountryService countryService;
     private final CountryRepository countryRepository;
 
-    public CountryController(CountryReader countryReader, CountryService countryService, CountryRepository countryRepository) {
-        this.countryReader = countryReader;
+    public CountryController(CountryService countryService, CountryRepository countryRepository) {
         this.countryService = countryService;
         this.countryRepository = countryRepository;
     }
